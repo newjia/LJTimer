@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oUK-Bp-SV6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="L8u-HH-VLy">
+            <objects>
+                <navigationController id="oUK-Bp-SV6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DyJ-QU-DDj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kC0-s9-Ptl" kind="relationship" relationship="rootViewController" id="r2h-Gh-Lsj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VJ-7e-K4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="87"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="fIc-2T-Ibb">
+            <objects>
+                <viewController id="kC0-s9-Ptl" customClass="FirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ga5-gR-fWn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0o8-hz-dZ6">
+                                <rect key="frame" x="60" y="153" width="295" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="2ti-et-6Wu"/>
+                                    <constraint firstAttribute="height" constant="343" id="DAf-EE-I32"/>
+                                </constraints>
+                                <state key="normal" title="过度页面"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Sfz-1s-p8f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0o8-hz-dZ6" firstAttribute="centerX" secondItem="Bhd-om-x2v" secondAttribute="centerX" id="Z96-dP-wxg"/>
+                            <constraint firstItem="0o8-hz-dZ6" firstAttribute="top" secondItem="Bhd-om-x2v" secondAttribute="top" constant="65" id="zPm-eG-LaS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bhd-om-x2v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kK3-rC-kG3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjd-Mk-pSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-408.69565217391306" y="84.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Je-KK-dwJ">
+                                <rect key="frame" x="55" y="274" width="297" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyx-Xz-q7P">
+                                <rect key="frame" x="127.5" y="376" width="159" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="m5o-9U-Neq"/>
+                                    <constraint firstAttribute="height" constant="94" id="xrZ-cb-cQv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="suspend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNW-bF-tsh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击屏幕，开启定时器" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whP-AO-lxP">
+                                <rect key="frame" x="72" y="122" width="270" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3Sx-KE-IxF"/>
+                                    <constraint firstAttribute="width" constant="270" id="Ddt-oo-b00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cyx-Xz-q7P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Uz-sS-H00"/>
+                            <constraint firstItem="cyx-Xz-q7P" firstAttribute="top" secondItem="6Je-KK-dwJ" secondAttribute="bottom" constant="100" id="OA4-lw-a0E"/>
+                            <constraint firstItem="whP-AO-lxP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XSV-Lu-z16"/>
+                            <constraint firstItem="6Je-KK-dwJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="186" id="lVw-G4-RpO"/>
+                            <constraint firstItem="6Je-KK-dwJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="mPS-Rc-PHO"/>
+                            <constraint firstItem="whP-AO-lxP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="oyG-W1-fqm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Je-KK-dwJ" secondAttribute="trailing" constant="62" id="r7D-lp-Xsr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fd0-X3-KUA"/>
+                    <connections>
+                        <outlet property="btn" destination="cyx-Xz-q7P" id="aVz-te-ht6"/>
+                        <outlet property="progress" destination="6Je-KK-dwJ" id="IWg-Ix-lip"/>
+                        <outlet property="statusLabel" destination="whP-AO-lxP" id="dWs-PM-C6q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="415.94202898550731" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+</document>
